@@ -1,2 +1,9 @@
 ---
 # tasks file for ansible-role-logging-team-modifications
+- name: copy slightly modified bashrc file to /etc directory
+  template:
+    src: templates/bashrc.j2
+    dest: /etc/bashrc
+    owner: root
+    group: root
+    mode: 0644
